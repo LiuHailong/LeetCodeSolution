@@ -16,7 +16,7 @@ package easy;
  * @author lhl
  * @date 2019-12-23
  */
-public class TwoSumByForce {
+public class 两数之和_暴力 {
 
     private static int[] nums={2, 11, 15, 7};
     private static int target = 9;
@@ -29,7 +29,7 @@ public class TwoSumByForce {
                 }
             }
         }
-        throw new IllegalArgumentException("No tow sum solution");
+        throw new IllegalArgumentException("No two sum solution");
     }
 
     public static void main(String[] args) {
