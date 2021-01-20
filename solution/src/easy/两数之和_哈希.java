@@ -19,7 +19,7 @@ import java.util.Map;
  * @author lhl
  * @date 2019-12-23
  */
-public class TwoSumByHash {
+public class 两数之和_哈希 {
 
     private static int[] nums={2, 11, 15, 7};
     private static int target = 9;
