@@ -1,7 +1,4 @@
-package easy;
-
-import java.util.HashMap;
-import java.util.Map;
+package solution.easy;
 
 /**
  *
@@ -19,26 +16,20 @@ import java.util.Map;
  * @author lhl
  * @date 2019-12-23
  */
-public class 两数之和_哈希 {
+public class 两数之和_暴力 {
 
     private static int[] nums={2, 11, 15, 7};
     private static int target = 9;
 
     public static int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> dataIndexMap = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            dataIndexMap.put(num, i);
-        }
-
-        for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            int left = target - num;
-            if(dataIndexMap.containsKey(left) && dataIndexMap.get(left) != i) {
-                return new int[]{i, dataIndexMap.get(left)};
+        for(int i = 0; i < nums.length - 1; i++) {
+            for(int j = i+1; j < nums.length; j++) {
+                if(nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
             }
         }
-        throw new IllegalArgumentException("No tow sum solution");
+        throw new IllegalArgumentException("No two sum solution");
     }
 
     public static void main(String[] args) {

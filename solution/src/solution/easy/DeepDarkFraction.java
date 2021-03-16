@@ -1,4 +1,4 @@
-package easy;
+package solution.easy;
 
 /**
  * 分式化简
